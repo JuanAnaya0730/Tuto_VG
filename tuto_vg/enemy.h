@@ -1,7 +1,6 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
-
 #include <QObject>
 #include <QGraphicsRectItem>
 #include <QTimer>

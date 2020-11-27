@@ -1,9 +1,11 @@
 #include "bullet.h"
 
+extern game *juego;
+
 Bullet::Bullet()
 {
     //Dibuja la bala.
-    setRect(0,0,10,50);
+    setRect(50,0,10,50);
 
     //Connect
     QTimer *timer = new QTimer();
@@ -18,6 +20,8 @@ void Bullet::move()
     QList<QGraphicsItem *> colliding_items = collidingItems();
     for(int i=0; i < colliding_items.size(); ++i){
         if(typeid (*(colliding_items[i])) == typeid (Enemy)){
+            //incrementa el puntaje
+            juego->score->increase();
             scene()->removeItem(colliding_items[i]);
             scene()->removeItem(this);
             delete  colliding_items[i];

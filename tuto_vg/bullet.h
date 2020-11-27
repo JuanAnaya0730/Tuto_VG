@@ -7,6 +7,7 @@
 #include <QGraphicsScene>
 #include <QDebug>
 #include "enemy.h"
+#include "game.h"
 
 class Bullet: public QObject, public QGraphicsRectItem
 {

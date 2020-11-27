@@ -11,13 +11,17 @@ CONFIG += c++11
 SOURCES += \
     bullet.cpp \
     enemy.cpp \
+    game.cpp \
     main.cpp \
-    myrect.cpp
+    myrect.cpp \
+    score.cpp
 
 HEADERS += \
     bullet.h \
     enemy.h \
-    myrect.h
+    game.h \
+    myrect.h \
+    score.h
 
 FORMS +=
 
